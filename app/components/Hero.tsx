@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen pt-40 pb-20 overflow-hidden bg-grid">
+        <section className="relative min-h-screen pt-30 pb-20 overflow-hidden   bg-grid">
             <div className="hero-spotlight" />
 
             <div className="container mx-auto px-6 relative z-10">

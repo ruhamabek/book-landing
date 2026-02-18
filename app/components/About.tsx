@@ -38,7 +38,7 @@ const features = [
 
 const About = () => {
     return (
-        <section id="about" className="py-32 bg-background border-t border-white/5 relative overflow-hidden">
+        <section id="about" className="py-32 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
 
                 {/* Header Block */}

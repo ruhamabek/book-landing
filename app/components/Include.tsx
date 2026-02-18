@@ -15,7 +15,7 @@ const items = [
 
 const Include = () => {
   return (
-    <section id="features" className="py-32 bg-background border-t border-white/5 relative overflow-hidden">
+    <section id="features" className="py-32   relative overflow-hidden">
       {/* Decorative vertical lines */}
       <div className="absolute inset-0 flex justify-around pointer-events-none opacity-5">
         {[1, 2, 3, 4].map(i => <div key={i} className="w-px h-full bg-white" />)}

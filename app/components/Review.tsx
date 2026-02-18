@@ -33,7 +33,7 @@ const reviews = [
 
 const Review = () => {
   return (
-    <section id="reviews" className="py-32 bg-background border-t border-white/5 relative overflow-hidden">
+    <section id="reviews" className="py-32   relative overflow-hidden">
       <div className="container mx-auto px-6">
 
         {/* Header Block */}
