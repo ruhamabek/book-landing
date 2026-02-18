@@ -126,7 +126,20 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    background-image: radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.15) 0%, transparent 60%);
+    background-color: #020202;
+    /* Slightly darker outer background */
+    padding: clamp(3rem, 15vw, 12rem);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Main wrapper to give a "boxed" appearance if needed */
+  body>* {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: #050505;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   }
 
   h1,
@@ -160,10 +173,23 @@
     transform: translate(-50%, -50%);
     width: 60vw;
     height: 60vh;
-    background: radial-gradient(circle at center, rgba(124, 58, 237, 0.15), transparent 70%);
+    background: radial-gradient(circle at center, rgba(168, 85, 247, 0.1), transparent 70%);
     filter: blur(100px);
     pointer-events: none;
     z-index: -1;
+  }
+
+  .hero-spotlight {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(from 180deg at 50% 0%, transparent 150deg, rgba(168, 85, 247, 0.15) 180deg, transparent 210deg);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
   }
 
   /* Neo-Brutalist "Hard" Shadows */
@@ -178,10 +204,20 @@
 
   /* Revolutionary Typography */
   .text-revolutionary {
-    @apply font-bold tracking-tighter;
-    font-family: var(--font-sans);
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    line-height: 0.9;
-    letter-spacing: -0.05em;
+    @apply font-bold tracking-tight;
+    font-family: var(--font-heading);
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-transform: none;
+  }
+
+  /* Ensure primary text colors inside headings match the vibe */
+  .text-revolutionary .text-primary,
+  h2 .text-primary {
+    @apply font-bold;
+    font-family: var(--font-heading);
+    font-size: inherit;
+    line-height: inherit;
   }
 }
