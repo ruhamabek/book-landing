@@ -218,9 +218,9 @@
   .text-revolutionary {
     @apply font-bold tracking-tight;
     font-family: var(--font-heading);
-    font-size: clamp(3.5rem, 8vw, 6rem);
-    line-height: 1;
-    letter-spacing: -0.02em;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
     text-transform: none;
   }
 

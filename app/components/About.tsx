@@ -1,38 +1,38 @@
 "use client"
 
 import React from 'react'
-import { Laptop, Database, Rocket, Layout, Server, DollarSign } from 'lucide-react'
+import { Lightbulb, Rocket, FileText, WalletCards, Mail, Route } from 'lucide-react'
 
 const features = [
     {
-        icon: Laptop,
-        title: "Front-end Mastery",
-        description: "Build immersive UIs with modern React patterns and advanced CSS techniques."
-    },
-    {
-        icon: Database,
-        title: "Backend Scalability",
-        description: "Master database architecture and high-performance server logic."
+        icon: Lightbulb,
+        title: "Idea Validation First",
+        description: "Learn to test your business idea before spending a dollar — using real market data, buyer personas, and MVPs."
     },
     {
         icon: Rocket,
-        title: "Deployment & OPS",
-        description: "Zero-downtime deployment strategies for global web applications."
+        title: "Launch Frameworks That Work",
+        description: "Follow a proven 7-day waitlist builder and 3-day micro-launch sequence to generate early buyers before you build."
     },
     {
-        icon: Layout,
-        title: "Revolutionary Design",
-        description: "Implement award-winning aesthetics inspired by high-tech neo-brutalism."
+        icon: FileText,
+        title: "Pages That Actually Convert",
+        description: "Engineer bottom-of-funnel landing pages with the exact psychological triggers that turn visitors into customers."
     },
     {
-        icon: Server,
-        title: "API Optimization",
-        description: "Write ultra-fast APIs that scale to millions of concurrent requests."
+        icon: WalletCards,
+        title: "Paid Ads on a Budget",
+        description: "Run Google Search and Meta ads profitably — even on small budgets — using precision targeting over spray-and-pray spending."
     },
     {
-        icon: DollarSign,
-        title: "Financial Freedom",
-        description: "Monetize your skills and build products that generate passive income."
+        icon: Mail,
+        title: "Email Retention Mastery",
+        description: "Build a loyalty system that keeps customers coming back with personalization, anti-churn sequences, and deep connection strategies."
+    },
+    {
+        icon: Route,
+        title: "End-to-End Ad Funnel Strategy",
+        description: "Map the full customer journey from awareness to conversion and measure ROI at every step."
     }
 ]
 
@@ -44,12 +44,12 @@ const About = () => {
                 {/* Header Block */}
                 <div className="flex flex-col md:flex-row items-end justify-between gap-8 mb-24">
                     <div className="space-y-4 max-w-2xl">
-                        <h2 className="text-revolutionary text-white leading-none">
-                            Revolutionary <br />
-                            <span className="text-primary italic">Learning.</span>
+                        <h2 className="text-5xl md:text-6xl font-bold text-white leading-tight">
+                            What Makes{" "}
+                            <span className="text-primary italic">This Different.</span>
                         </h2>
                         <p className="text-lg text-slate-300 font-normal leading-relaxed">
-                            This isn't just a book. It's an architectural blueprint for your career as a world-class developer.
+                            This collection gives you a complete entrepreneurial operating system — from validating your first idea to running profitable paid ads — so you never have to piece together random advice again.
                         </p>
                     </div>
                     <div className="hidden md:block text-[8rem] font-bold text-white/[0.03] select-none leading-none">

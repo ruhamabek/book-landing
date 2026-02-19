@@ -5,21 +5,25 @@ import { ArrowUpRight, Send } from 'lucide-react'
 
 const audiences = [
   {
-    title: "Software Developers",
-    description: "Architect complex systems and master the full-stack ecosystem with a focus on performance."
+    title: "First-Time Founders",
+    description: "You have an idea but aren't sure it's viable. This collection starts exactly where you are and walks you through validation before you risk anything."
   },
   {
     icon: ArrowUpRight,
-    title: "App Architects",
-    description: "Design scalable mobile and desktop applications using revolutionary design principles."
+    title: "Side-Project Entrepreneurs",
+    description: "You're building on evenings and weekends and need efficient, no-waste systems to launch fast with limited time and budget."
   },
   {
-    title: "Product Engineers",
-    description: "Bridge the gap between design and code, creating products people actually love."
+    title: "Digital Product Creators",
+    description: "Selling courses, ebooks, or templates? Every chapter from landing pages to email retention applies directly to your business model."
   },
   {
-    title: "Independent Creators",
-    description: "Build, launch, and monetize your own digital products with zero overhead."
+    title: "Small Businesses Going Online",
+    description: "If you're transitioning from offline to digital, this collection covers the full stack of skills you need to acquire customers online."
+  },
+  {
+    title: "Marketers Going Independent",
+    description: "You understand marketing but want to apply it to your own venture. The ad funnel, Meta, and Google chapters will feel immediately actionable."
   }
 ]
 
@@ -30,8 +34,8 @@ const ForWho = () => {
 
         {/* Header Block: Left-Aligned Stack */}
         <div className="max-w-4xl mb-24 space-y-12">
-          <h2 className="text-revolutionary   text-white leading-none">
-            Target <br />
+          <h2 className="text-6xl md:text-7xl font-bold text-white leading-tight">
+            Target{" "}
             <span className="text-primary italic">Audience.</span>
           </h2>
           <div className="space-y-4">
@@ -39,7 +43,7 @@ const ForWho = () => {
               blueprint_03
             </div>
             <p className="text-lg text-slate-300 font-normal leading-relaxed">
-              If you are looking to elevate your engineering skills to a designer level, this is for you.
+              This collection is for builders who want to do the work the right way — not for people looking for get-rich-quick tactics or passive income shortcuts.
             </p>
           </div>
         </div>
@@ -53,7 +57,7 @@ const ForWho = () => {
             >
               <div className="flex items-center gap-8">
                 <span className="text-sm font-bold text-primary font-mono">0{index + 1}</span>
-                <h3 className="text-2xl md:text-4xl font-bold text-white group-hover:translate-x-4 transition-transform duration-500">
+                <h3 className="text-xl md:text-3xl font-bold text-white group-hover:translate-x-4 transition-transform duration-500">
                   {audience.title}
                 </h3>
               </div>
