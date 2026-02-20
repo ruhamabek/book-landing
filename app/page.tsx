@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Include from "./components/Include";
 import Navbar from "./components/Header";
 import Review from "./components/Review";
+import Author from "./components/Author";
 
  
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
            <Include />
            <ForWho />
            <Review />
+           <Author />
            <Footer />
      </main>
   );

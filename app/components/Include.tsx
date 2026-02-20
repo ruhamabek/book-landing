@@ -204,13 +204,9 @@ const Book = ({
 
 const Include = () => {
   return (
-    <section id="features" className=" py-10 relative overflow-hidden font-segoe pl-14">
-      {/* Decorative vertical lines */}
-      <div className="absolute inset-0 flex justify-around pointer-events-none opacity-5">
-        {[1, 2, 3, 4].map(i => <div key={i} className="w-px h-full bg-white" />)}
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="features" className="py-24 relative overflow-hidden font-segoe px-6 md:px-12 lg:px-24">
+  
+      <div className="container mx-auto relative z-10">
 
         {/* Header Block */}
         <div className="flex flex-col items-center justify-center text-center gap-6 mb-20">
@@ -220,10 +216,10 @@ const Include = () => {
           </h2>
         </div>
 
-        <div className="flex flex-col xl:flex-row items-center justify-between gap-16 lg:gap-40">
+        <div className="flex flex-col xl:flex-row items-center justify-between gap-16 lg:gap-32">
 
           {/* Left Column: Two 3D books */}
-          <div className="flex-[1.4] relative w-full lg:max-w-2xl animate-in fade-in zoom-in duration-1000 pb-16 md:pb-32">
+          <div className="flex-[1.2] relative w-full lg:max-w-2xl animate-in fade-in zoom-in duration-1000 pb-12 xl:pb-32 flex items-center justify-center">
             <div
               className="relative mx-auto flex items-end justify-center"
               style={{ minHeight: 'auto' }}
@@ -232,14 +228,14 @@ const Include = () => {
               <div
                 className="transition-all duration-700 hover:scale-105 hover:-translate-y-2 hidden sm:block"
                 style={{
-                  marginRight: '-90px',
-                  marginBottom: '60px',
+                  marginRight: '-60px',
+                  marginBottom: '50px',
                   zIndex: 10,
                   filter: 'drop-shadow(0 50px 70px rgba(0,0,0,0.65))',
                 }}
               >
                 <Book
-                  width={450}
+                  width={270}
                   scale={1}
                   rotateY={-22}
                   rotateX={8}
@@ -259,7 +255,7 @@ const Include = () => {
                 }}
               >
                 <Book
-                  width={280}
+                  width={200}
                   scale={0.85}
                   rotateY={-20}
                   rotateX={5}
@@ -280,7 +276,7 @@ const Include = () => {
                 }}
               >
                 <Book
-                  width={300}
+                  width={200}
                   scale={1}
                   rotateY={-42}
                   rotateX={14}
@@ -294,25 +290,25 @@ const Include = () => {
           </div>
 
           {/* Right Column: Checklist */}
-          <div className="flex-1 w-full space-y-10 animate-in fade-in slide-in-from-right duration-1000">
-            <div className="space-y-4">
+          <div className="flex-1 w-full space-y-10 animate-in fade-in slide-in-from-right duration-1000 flex flex-col items-center xl:items-start">
+            <div className="space-y-4 w-full">
               {items.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-4 transition-all group"
+                  className="flex items-center gap-4 transition-all group justify-center xl:justify-start"
                 >
                   <div className="flex-shrink-0 text-emerald-500">
                     <CheckCircle2 size={24} />
                   </div>
-                  <span className="text-md text-gray-300 leading-relaxed font-light">
+                  <span className="text-md text-gray-300 leading-relaxed font-extralight text-center xl:text-left">
                     {item}
                   </span>
                 </div>
               ))}
             </div>
 
-            <div className="pt-4 lg:pt-8 ml-25">
-              <button className="w-full sm:w-auto bg-primary text-white text-md font-semibold px-12 py-4 rounded-full shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-4 ">
+            <div className="pt-4 lg:pt-8 w-full flex justify-center xl:justify-start">
+              <button className="w-full sm:w-auto bg-primary text-white text-md font-semibold px-12 py-4 rounded-full shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-4">
                 I want this book
               </button>
             </div>
@@ -320,8 +316,6 @@ const Include = () => {
 
         </div>
       </div>
-
-      
     </section>
   )
 }

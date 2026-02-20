@@ -38,7 +38,7 @@ const reviews = [
 
 const Review = () => {
   return (
-    <section id="reviews" className="py-32 relative overflow-hidden font-segoe">
+    <section id="reviews" className="py-20 md:py-32 relative overflow-hidden font-segoe">
       <div className="container mx-auto px-6">
 
         {/* Header Block: Centered */}
@@ -47,7 +47,7 @@ const Review = () => {
             Book{" "}
             <span className="text-primary">Reviews.</span>
           </h2>
-          <p className="text-md md:text-lg text-gray-300 font-light leading-relaxed">
+          <p className="text-md md:text-lg text-gray-300 font-extralight leading-relaxed">
             See what our readers are saying.
           </p>
         </div>

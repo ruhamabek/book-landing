@@ -31,7 +31,7 @@ const HeroBook = () => {
             overflow: 'hidden',
           }}
         >
-          <Image src="/14.png" alt="Book cover" fill className="object-cover" priority />
+          <Image src="/14.png" alt="Book cover" fill className="object-cover " priority />
           {/* gloss sheen */}
           <div style={{
             position: 'absolute', inset: 0, pointerEvents: 'none',
@@ -144,14 +144,14 @@ const HeroBook = () => {
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen pt-30 pb-20 overflow-hidden bg-grid font-segoe pl-12 pr-12">
+    <section className="relative min-h-screen pt-32 pb-20 overflow-hidden bg-grid font-segoe px-6 md:px-12 lg:px-24">
       <div className="hero-spotlight" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
+      <div className="container mx-auto relative z-10">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-16 lg:gap-24">
 
           {/* Left Column: Typography */}
-          <div className="flex-1 space-y-8 animate-in fade-in slide-in-from-left duration-1000">
+          <div className="flex-1 space-y-8 animate-in fade-in slide-in-from-left duration-1000 text-center lg:text-left flex flex-col items-center lg:items-start">
             <div className="space-y-4">
 
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-semibold text-white tracking-tight">
@@ -160,12 +160,12 @@ const Hero = () => {
               </h1>
             </div>
 
-            <p className="text-md sm:text-lg text-gray-300 font-light leading-relaxed max-w-xl">
+            <p className="text-md sm:text-lg text-gray-300 font-extralight leading-relaxed max-w-xl">
               A practical 10-chapter collection that takes you from raw idea to real, paying customers without scattered advice or hype.
             </p>
 
-            <div className="flex flex-wrap items-center gap-6 pt-6">
-              <button className="bg-primary text-white text-md font-semibold px-8 py-4 rounded-full shadow-md hover:shadow-lg transition-all flex items-center gap-3">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-6">
+              <button className="bg-primary text-white text-md font-semibold px-8 py-4 rounded-full shadow-md hover:shadow-lg transition-all">
                 Get The Collection
               </button>
               <button className="text-white text-md font-semibold hover:text-primary transition-colors border border-white/20 hover:border-primary px-8 py-4 rounded-full">
@@ -174,30 +174,30 @@ const Hero = () => {
             </div>
 
             {/* Testimonial Card */}
-            <div className="pt-12 space-y-8 w-200">
-              <div className="bg-background  p-8 shadow-sm relative overflow-hidden">
+            <div className="pt-12 space-y-8 w-full max-w-2xl">
+              <div className="bg-background p-6 md:p-8 shadow-sm relative overflow-hidden text-left">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary" />
                 <p className="text-muted-foreground italic text-lg font-light leading-relaxed">
                   "Highly recommended consectetur adipiscing elit. Proin et auctor dolor, sed venenatis massa. Vestibulum ullamcorper lobortis nisi non placerat praesent mauris neque"
                 </p>
               </div>
 
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4 px-2">
                 <div className="flex items-center gap-4">
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-sm">
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-sm shrink-0">
                     <img
                       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150"
                       alt="Jean Doe"
                       className="object-cover w-full h-full"
                     />
                   </div>
-                  <div>
+                  <div className="text-left">
                     <h4 className="text-white font-semibold text-lg">Jean Doe</h4>
                     <p className="text-gray-400 text-sm">Senior Developer, Ipsum Company</p>
                   </div>
                 </div>
 
-                 
+
               </div>
             </div>
 
@@ -205,12 +205,21 @@ const Hero = () => {
           </div>
 
           {/* Right Column: 3D Book */}
-          <div className="flex-1 relative w-full lg:max-w-md ml-auto animate-in fade-in slide-in-from-right duration-1000 flex items-center justify-center">
+          <div className="hidden lg:flex flex-1 relative w-full max-w-[320px] sm:max-w-md lg:max-w-lg mx-auto lg:ml-auto animate-in fade-in slide-in-from-right duration-1000 items-center justify-center">
             <div
               className="transition-all duration-700 hover:scale-105 hover:-translate-y-3"
               style={{ filter: 'drop-shadow(0 40px 60px rgba(0,0,0,0.65))' }}
             >
-              <HeroBook />
+              {/* Scale the book responsive using scale prop */}
+              <div className="hidden lg:block">
+                <HeroBook />
+              </div>
+              <div className="hidden sm:block lg:hidden">
+                <HeroBook />
+              </div>
+              <div className="sm:hidden">
+                <HeroBook />
+              </div>
             </div>
 
             {/* Ground shadow */}
@@ -227,7 +236,7 @@ const Hero = () => {
       </div>
 
       {/* Background decorative text */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 text-[20rem] font-bold text-white/[0.02] select-none pointer-events-none whitespace-nowrap -rotate-90">
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 text-[20rem] font-bold text-white/[0.02] select-none pointer-events-none whitespace-nowrap -rotate-90 hidden xl:block">
         REVOLUTION
       </div>
     </section>

@@ -38,8 +38,8 @@ const features = [
 
 const About = () => {
     return (
-        <section id="about" className="py-32 relative overflow-hidden font-segoe pl-13 pr-13">
-            <div className="container mx-auto px-15 relative z-10">
+        <section id="about" className="py-20 md:py-32 relative overflow-hidden font-segoe px-6 md:px-12 lg:px-24">
+            <div className="container mx-auto relative z-10">
 
                 {/* Header Block */}
                 <div className="flex flex-col items-center text-center gap-6 mb-24 max-w-3xl mx-auto">
@@ -48,7 +48,7 @@ const About = () => {
                             What Makes{" "}
                             <span className="text-primary">This Different.</span>
                         </h2>
-                        <p className="text-md md:text-lg text-gray-300 font-light leading-relaxed">
+                        <p className="text-md md:text-lg text-gray-300 font-extralight leading-relaxed">
                             This collection gives you a complete entrepreneurial operating system from validating your first idea to running profitable paid ads so you never have to piece together random advice again.
                         </p>
                     </div>
@@ -68,7 +68,7 @@ const About = () => {
                                 <h3 className="text-xl font-bold text-white">
                                     {feature.title}
                                 </h3>
-                                <p className="text-sm text-gray-300 font-light leading-relaxed">
+                                <p className="text-sm text-gray-300 font-extralight leading-relaxed">
                                     {feature.description}
                                 </p>
                             </div>

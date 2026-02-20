@@ -29,7 +29,7 @@ const audiences = [
 
 const ForWho = () => {
   return (
-    <section id="for-who" className="   relative overflow-hidden font-segoe">
+    <section id="for-who" className="py-20 md:py-32 relative overflow-hidden font-segoe">
       <div className="container mx-auto px-6">
 
         {/* Header Block: Centered */}
@@ -39,7 +39,7 @@ const ForWho = () => {
             <span className="text-primary">Book Is For.</span>
           </h2>
           <div className="space-y-4">
-            <p className="text-md md:text-lg text-gray-300 font-light leading-relaxed max-w-3xl">
+            <p className="text-md md:text-lg text-gray-300 font-extralight leading-relaxed max-w-3xl">
               This collection is for builders who want to do the work the right way not for people looking for get-rich-quick tactics or passive income shortcuts.
             </p>
           </div>
@@ -59,7 +59,7 @@ const ForWho = () => {
                 <h3 className="text-lg font-bold text-white">
                   {audience.title}
                 </h3>
-                <p className="text-md text-gray-300 font-light leading-relaxed">
+                <p className="text-md text-gray-300 font-extralight leading-relaxed">
                   {audience.description}
                 </p>
               </div>
@@ -68,13 +68,13 @@ const ForWho = () => {
         </div>
 
         {/* CTA Block: Centered Preview */}
-        <div className="relative bg-white/[0.02] border mr-55  ml-55 border-white/5 rounded-2xl overflow-hidden mt-24">
-          <div className="p-12 md:p-20 relative z-10 flex  flex-col items-center text-center space-y-8">
+        <div className="relative bg-white/[0.02] border border-white/5 rounded-2xl overflow-hidden mt-12 md:mt-24 mx-4 md:mx-0">
+          <div className="p-8 md:p-20 relative z-10 flex flex-col items-center text-center space-y-8">
             <div className="space-y-4 max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-bold text-white">
                 Get A Free Preview
               </h2>
-              <p className="text-md md:text-lg text-gray-300 font-light leading-relaxed">
+              <p className="text-md md:text-lg text-gray-300 font-extralight leading-relaxed">
                 Sign up to get a free preview of the book. <br />
                 You can offer visitors free book previews to generate leads.
               </p>

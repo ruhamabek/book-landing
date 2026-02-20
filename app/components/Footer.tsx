@@ -9,7 +9,7 @@ const Footer = () => (
           <div className="flex items-center space-x-2 mb-4">
             <img src="image.png" alt="" className="w-40" />
           </div>
-          <p className="text-gray-300 text-md md:text-lg font-light max-w-md mb-4 leading-relaxed">
+          <p className="text-gray-300 text-md md:text-lg font-extralight max-w-md mb-4 leading-relaxed">
             Building the future of team communication with subscription-based
             innovation. Get continuous updates, new features, and dedicated
             support.
