@@ -1,7 +1,9 @@
 "use client"
 
 import React from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
+
 
 const HeroBook = () => {
   const width = 420
@@ -165,23 +167,30 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-6">
-              <button className="bg-primary text-white text-md font-semibold px-8 py-4 rounded-full shadow-md hover:shadow-lg transition-all">
+              <Link
+                href="http://localhost:3000/checkout/pro-book"
+                className="bg-primary text-white text-md font-semibold px-8 py-4 rounded-full shadow-md hover:shadow-lg transition-all"
+              >
                 Get The Collection
-              </button>
-              <button className="text-white text-md font-semibold hover:text-primary transition-colors border border-white/20 hover:border-primary px-8 py-4 rounded-full">
-                See What's Inside
+              </Link>
+              <button
+                onClick={() => document.getElementById('freebie-section')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-white text-md font-semibold hover:text-primary transition-colors border border-white/20 hover:border-primary px-8 py-4 rounded-full"
+              >
+                Download Free Preview
               </button>
             </div>
+
 
             {/* Testimonial Card */}
             <div className="pt-12 space-y-8 w-full max-w-2xl">
               <div className="bg-background p-6 md:p-8 shadow-sm relative overflow-hidden text-left">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary" />
                 <p className="text-muted-foreground italic text-lg font-light leading-relaxed">
-```tsx
+                  ```tsx
                   "This collection provided the structured roadmap I needed to transition from a conceptual stage to securing my first paying clients. The practical approach is a refreshing departure from typical entrepreneurial advice."
                 </p>
-```
+                ```
               </div>
 
               <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4 px-2">

@@ -7,18 +7,18 @@ import Navbar from "./components/Header";
 import Review from "./components/Review";
 import Author from "./components/Author";
 
- 
+
 export default function Home() {
   return (
-     <main>
-           <Navbar />
-           <Hero/>
-           <About />
-           <Include />
-           <ForWho />
-           <Review />
-           <Author />
-           <Footer />
-     </main>
+    <main>
+      <Navbar />
+      <Hero />
+      <About />
+      <Include />
+      <ForWho />
+      <Review />
+      <Author />
+      <Footer />
+    </main>
   );
 }

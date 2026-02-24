@@ -30,9 +30,13 @@ const NavBar = () => (
             <button className="hidden sm:inline-block font-medium text-white hover:text-purple-700 transition-colors">
               Sign In
             </button>
-            <button className="bg-primary hover:bg-primary/90 text-white font-semibold px-6 sm:px-8 py-3 rounded-full shadow-md hover:shadow-lg transition-all">
+            <Link
+              href="http://localhost:3000/checkout/pro-book"
+              className="bg-primary hover:bg-primary/90 text-white font-semibold px-6 sm:px-8 py-3 rounded-full shadow-md hover:shadow-lg transition-all"
+            >
               Get the Book
-            </button>
+            </Link>
+
           </div>
         </div>
       </div>

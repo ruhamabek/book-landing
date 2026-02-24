@@ -28,6 +28,33 @@ const audiences = [
 ]
 
 const ForWho = () => {
+  const [email, setEmail] = React.useState("");
+  const [status, setStatus] = React.useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      // Pointing to Dopebase local for testing as requested
+      const response = await fetch(
+        `http://localhost:3000/api/freebies/requestFreebieLink?productId=90e046c5-740e-44ec-ae84-46d2a816b68c&email=${encodeURIComponent(
+          email
+        )}`,
+        {
+          method: "GET",  
+          mode: 'no-cors' // Allow cross-origin requests for testing
+        }
+      );
+
+       setStatus("success");
+      setEmail("");
+    } catch (error) {
+      console.error("Freebie request failed", error);
+      setStatus("error");
+    }
+  };
+
   return (
     <section id="for-who" className="py-20 md:py-32 relative overflow-hidden font-segoe">
       <div className="container mx-auto px-6">
@@ -80,20 +107,42 @@ const ForWho = () => {
               </p>
             </div>
 
-            <form className="flex flex-col sm:flex-row gap-2 w-full max-w-xl mx-auto" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="flex-1 bg-white/5 border border-white/10 px-6 py-4 text-white text-md font-medium focus:outline-none focus:border-primary transition-all  "
-                required
-              />
-              <button
-                type="submit"
-                className="bg-primary text-white px-10 py-4 text-md font-semibold hover:bg-primary/90 transition-all shadow-md  "
-              >
-                Send
-              </button>
-            </form>
+            {status === "success" ? (
+              <div className="bg-green-500/10 border border-green-500/20 p-6 rounded-2xl animate-in zoom-in duration-300">
+                <p className="text-green-400 font-medium">
+                  Check your inbox! We've sent the preview link to your email.
+                </p>
+                <button
+                  onClick={() => setStatus("idle")}
+                  className="mt-4 text-white/60 hover:text-white text-sm underline"
+                >
+                  Send to another email
+                </button>
+              </div>
+            ) : (
+              <form className="flex flex-col sm:flex-row gap-2 w-full max-w-xl mx-auto" onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Your Email"
+                  className="flex-1 bg-white/5 border border-white/10 px-6 py-4 text-white text-md font-medium focus:outline-none focus:border-primary transition-all  "
+                  required
+                />
+                <button
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="bg-primary text-white px-10 py-4 text-md font-semibold hover:bg-primary/90 transition-all shadow-md disabled:opacity-50"
+                >
+                  {status === "loading" ? "Sending..." : "Send"}
+                </button>
+              </form>
+            )}
+            {status === "error" && (
+              <p className="text-red-400 text-sm">
+                Something went wrong. Please try again or check your connection.
+              </p>
+            )}
           </div>
         </div>
       </div>
